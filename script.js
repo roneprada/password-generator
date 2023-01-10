@@ -9,7 +9,7 @@ var specialCharacters = ['@', '%', '+', '/', "'", '!', '#', '$', '^', '?', ':', 
 function generatePassword() {
   var generatedPassword = '';
   var passwordCriteria = [];
-    var length = prompt("Choose password length between 8 and 128 characters");
+    var question = prompt("Choose password length between 8 and 128 characters");
      var askNumbers = confirm("Do you want your password to include numbers?");
      var askLowerCase = confirm("Do you want your password to include lower case letters?");
      var askUpperCase = confirm("Do you want your password to include upper case letters?");
@@ -31,7 +31,7 @@ function generatePassword() {
     }
     console.log(passwordCriteria);
 
-for(var i = 0; i <length; i++){
+for(var i = 0; i < question; i++){
   var randomIndex = Math.floor(Math.random() * passwordCriteria.length);
   var randomCharacter = passwordCriteria[randomIndex];
   generatedPassword += randomCharacter; 
